@@ -1,7 +1,7 @@
 import {deleteItem} from "../../../data/items/itemsRepo.js";
 import {useState} from "react";
 import {useNavigate} from "react-router-dom";
-import Button from "../../components/Button.jsx";
+import Button from "../../components/buttons/Button.jsx";
 
 const ItemsAdminListItemView = ({item, categories}) => {
   const navigate = useNavigate()

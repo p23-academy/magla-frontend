@@ -1,6 +1,6 @@
 import {Form, redirect, useLoaderData} from "react-router-dom";
 import {getCategoryById, updateCategory} from "../../../data/categories/categoriesRepo.js";
-import Button from "../../components/Button.jsx";
+import Button from "../../components/buttons/Button.jsx";
 import FormInput from "../../components/forms/FormInput.jsx";
 
 export const editCategoryFormLoader = async ({params}) => {

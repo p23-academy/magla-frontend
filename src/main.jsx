@@ -7,13 +7,20 @@ import RegisterView, {registerAction} from "./ui/auth/RegisterView.jsx";
 import LoginView, {loginAction} from "./ui/auth/LoginView.jsx";
 import CategoriesAdminListView, {categoriesListLoader} from "./ui/admin/categories/CategoriesAdminListView.jsx";
 import CategoriesAdminNewItemView, {newCategoryFormAction} from "./ui/admin/categories/CategoriesAdminNewItemView.jsx";
-import CategoriesAdminEditItemView, {editCategoryFormAction, editCategoryFormLoader} from "./ui/admin/categories/CategoriesAdminEditItemView.jsx";
+import CategoriesAdminEditItemView, {
+  editCategoryFormAction,
+  editCategoryFormLoader
+} from "./ui/admin/categories/CategoriesAdminEditItemView.jsx";
 import AdminLayout from "./ui/admin/AdminLayout.jsx";
 import ItemsAdminListView, {itemsListLoader} from "./ui/admin/items/ItemsAdminListView.jsx";
 import ItemsAdminNewItemView, {newItemFormAction, newItemLoader} from "./ui/admin/items/ItemsAdminNewItemView.jsx";
-import ItemsAdminEditItemView, {editItemFormAction, editItemFormLoader} from "./ui/admin/items/ItemsAdminEditItemView.jsx";
+import ItemsAdminEditItemView, {
+  editItemFormAction,
+  editItemFormLoader
+} from "./ui/admin/items/ItemsAdminEditItemView.jsx";
 import ShopLayout, {shopLayoutLoader} from "./ui/shop/ShopLayout.jsx";
 import ItemsGridView, {itemsGridViewLoader} from "./ui/shop/items/ItemsGridView.jsx";
+import CheckoutView, {checkoutAction} from "./ui/checkout/CheckoutView.jsx";
 
 const router = createBrowserRouter([
   {
@@ -45,6 +52,11 @@ const router = createBrowserRouter([
         element: <ItemsGridView/>,
       }
     ]
+  },
+  {
+    path: "/checkout",
+    action: checkoutAction,
+    element: <CheckoutView/>,
   },
   {
     path: "/admin",

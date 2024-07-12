@@ -1,4 +1,4 @@
-const FormInput = ({
+const BigFormInput = ({
   name,
   label,
   required,
@@ -6,10 +6,10 @@ const FormInput = ({
   initialValue
 }) => {
   return (
-    <div className={"flex gap-2"}>
-      <label className={"w-32"} htmlFor={name}>{label}:</label>
+    <div className={"flex gap-2 w-full"}>
+      <label className={"w-40 text-2xl"} htmlFor={name}>{label}:</label>
       <input
-        className={"border-2 border-black px-2 py-1"}
+        className={"border-2 border-black px-2 py-1 text-xl flex-grow"}
         required={required}
         type={type || "text"}
         name={name}
@@ -20,4 +20,4 @@ const FormInput = ({
   )
 }
 
-export default FormInput
+export default BigFormInput

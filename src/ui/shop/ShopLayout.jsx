@@ -1,6 +1,9 @@
 import {Outlet, useLoaderData} from "react-router-dom";
 import ShopLayoutTopbar from "./ShopLayoutTopbar.jsx";
 import {getAllCategories} from "../../data/categories/categoriesRepo.js";
+import CartView from "./cart/CartView.jsx";
+import {useState} from "react";
+import {getCart} from "../../data/cart/cartRepo.js";
 
 export const shopLayoutLoader = async () => {
   const categoriesResponse = await getAllCategories()
@@ -25,6 +28,7 @@ const ShopLayout = () => {
       <ShopLayoutTopbar categories={categories}/>
       <div className={"flex flex-grow"}>
         <Outlet/>
+        <CartView/>
       </div>
     </div>
   )

@@ -1,6 +1,6 @@
 import {Form, redirect, useLoaderData} from "react-router-dom";
 import {getItemById, updateItem} from "../../../data/items/itemsRepo.js";
-import Button from "../../components/Button.jsx";
+import Button from "../../components/buttons/Button.jsx";
 import FormInput from "../../components/forms/FormInput.jsx";
 import {getAllCategories} from "../../../data/categories/categoriesRepo.js";
 

@@ -1,7 +1,7 @@
 import {deleteCategory} from "../../../data/categories/categoriesRepo.js";
 import {useState} from "react";
 import {Link, useNavigate} from "react-router-dom";
-import Button from "../../components/Button.jsx";
+import Button from "../../components/buttons/Button.jsx";
 
 const CategoriesAdminListItemView = ({category}) => {
   const navigate = useNavigate()

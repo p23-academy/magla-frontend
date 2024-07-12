@@ -1,7 +1,7 @@
 import {getAllCategories} from "../../../data/categories/categoriesRepo.js";
 import {useLoaderData, useNavigate} from "react-router-dom";
 import CategoriesAdminListItemView from "./CategoriesAdminListItemView.jsx";
-import Button from "../../components/Button.jsx";
+import Button from "../../components/buttons/Button.jsx";
 
 export const categoriesListLoader = async () => {
   const categoriesResponse = await getAllCategories()
