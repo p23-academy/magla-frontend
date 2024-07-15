@@ -23,8 +23,8 @@ const CheckoutView = () => {
   const cart = getCart()
 
   return (
-    <div className={"h-screen w-screen p-4 bg-orange-50 flex flex-col gap-4"}>
-      <h1 className={"text-4xl font-bold mb-4"}>Narudžba</h1>
+    <div className={"h-screen w-screen p-4 bg-orange-50 flex flex-col items-center gap-4"}>
+      <h1 className={"text-4xl font-bold my-4"}>Narudžba</h1>
       <div className={"flex flex-col gap-2 w-1/2"}>
         {cart.map((item, index) => (
           <CheckoutItemView key={index} item={item}/>
@@ -36,7 +36,7 @@ const CheckoutView = () => {
           <BigFormInput label={"Adresa"} name={"buyerAddress"} required={true}/>
           <BigFormInput label={"Broj telefona"} name={"buyerPhone"} required={true}/>
         </div>
-        <BigButton type={"submit"} text={"Naruči"} className={"w-full"}/>
+        <BigButton type={"submit"} text={"Naruči"} className={"w-full mt-4"}/>
       </Form>
     </div>
   )

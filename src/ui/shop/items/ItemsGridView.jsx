@@ -20,7 +20,7 @@ const ItemsGridView = () => {
   const {items} = useLoaderData()
 
   return (
-    <div className={"w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 justify-items-center items-center"}>
+    <div className={"w-full p-4 grid gap-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-4 self-start"}>
       {items.map((item, index) => (
         <ItemsGridItemView key={index} item={item}/>
       ))}

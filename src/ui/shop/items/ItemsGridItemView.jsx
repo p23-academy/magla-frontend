@@ -4,7 +4,7 @@ import {addToCart} from "../../../data/cart/cartRepo.js";
 const ItemsGridItemView = ({item}) => {
 
   return (
-    <div className={"flex flex-col gap-1 justify-center items-center bg-orange-100 rounded-lg p-2 w-48"}>
+    <div className={"w-full h-64 flex flex-col gap-1 justify-center items-center bg-orange-100 rounded-lg p-2"}>
       <h5 className={"text-xl font-medium text-center mb-2"}>{item.name}</h5>
       <img className={"w-24 h-24"} src={item.imageUrl}/>
       <p className={"text-md font-light"}>{item.description}</p>
