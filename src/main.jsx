@@ -21,6 +21,11 @@ import ItemsAdminEditItemView, {
 import ShopLayout, {shopLayoutLoader} from "./ui/shop/ShopLayout.jsx";
 import ItemsGridView, {itemsGridViewLoader} from "./ui/shop/items/ItemsGridView.jsx";
 import CheckoutView, {checkoutAction} from "./ui/checkout/CheckoutView.jsx";
+import OrdersAdminListView, {ordersListLoader} from "./ui/admin/orders/OrdersAdminListView.jsx";
+import OrdersAdminOrderView, {
+  ordersAdminOrderViewAction,
+  ordersAdminOrderViewLoader
+} from "./ui/admin/orders/OrdersAdminOrderView.jsx";
 
 const router = createBrowserRouter([
   {
@@ -94,6 +99,17 @@ const router = createBrowserRouter([
         loader: editItemFormLoader,
         action: editItemFormAction,
         element: <ItemsAdminEditItemView/>,
+      },
+      {
+        path: "/admin/orders",
+        loader: ordersListLoader,
+        element: <OrdersAdminListView/>,
+      },
+      {
+        path: "/admin/orders/view/:id",
+        loader: ordersAdminOrderViewLoader,
+        action: ordersAdminOrderViewAction,
+        element: <OrdersAdminOrderView/>,
       },
     ]
   },

@@ -11,6 +11,10 @@ const AdminLayoutSidebar = () => {
         text={"Artikli"}
         to={"/admin/items"}
       />
+      <AdminSidebarButton
+        text={"Narudžbe"}
+        to={"/admin/orders"}
+      />
     </div>
   )
 }
