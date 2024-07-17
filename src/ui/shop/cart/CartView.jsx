@@ -22,7 +22,7 @@ const CartView = () => {
         ))}
       </div>
       <div className={"flex flex-col gap-2 p-2"}>
-        <BigButton className={"w-full bg-gray-400"} text={"Isprazni korpu"} onClick={() => clearCart()}/>
+        <BigButton className={"w-full !bg-gray-400"} text={"Isprazni korpu"} onClick={() => clearCart()}/>
         <BigButton className={"w-full"} text={"Naruči"} onClick={() => navigate('/checkout')}/>
       </div>
     </div>

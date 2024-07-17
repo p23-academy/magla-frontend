@@ -1,5 +1,8 @@
 import {Form, json, redirect, useActionData} from "react-router-dom";
 import {loginUser} from "../../data/auth/authRepo.js";
+import FormInput from "../components/forms/FormInput.jsx";
+import BigButton from "../components/buttons/BigButton.jsx";
+import Button from "../components/buttons/Button.jsx";
 
 export const loginAction = async ({request}) => {
   const formData = await request.formData()
@@ -19,28 +22,14 @@ const LoginView = () => {
   const actionData = useActionData()
 
   return (
-    <div className={"w-screen h-screen flex items-center justify-center"}>
+    <div className={"w-screen h-screen flex items-center justify-center bg-orange-100"}>
       <Form method="post">
-        <div className="flex flex-col w-64 bg-gray-200 p-2 rounded-lg gap-1">
-          <h1 className={"text-lg font-bold"}>Prijava</h1>
-          <input
-            required
-            type={"email"}
-            name={"email"}
-            placeholder={"E-mail"}
-          />
-          <input
-            required
-            type={"password"}
-            name={"password"}
-            placeholder={"Šifra"}
-          />
+        <div className="flex flex-col w-96 items-center bg-white p-4 rounded-lg gap-2">
+          <h1 className={"text-2xl font-bold"}>Prijava</h1>
+          <FormInput type={"email"} name={"email"} label={"Email"} required={true} vertical={true} />
+          <FormInput type={"password"} name={"password"} label={"Šifra"} required={true} vertical={true} />
           {actionData?.error && <p className={"text-lg text-red-500"}>{actionData.error}</p>}
-          <button
-            type={"submit"}
-          >
-            Prijavi se
-          </button>
+          <BigButton type={"submit"} text={"Prijavi se"}/>
         </div>
       </Form>
     </div>

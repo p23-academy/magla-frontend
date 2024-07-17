@@ -11,7 +11,7 @@ export const ordersListLoader = async () => {
 const OrdersAdminListView = () => {
   const {orders} = useLoaderData()
   return (
-    <div className={"w-full h-full p-2"}>
+    <div className={"flex-grow flex flex-col p-2 overflow-y-auto"}>
       <div className={"flex justify-between mb-2"}>
         <h5 className={"text-xl font-bold"}>Narudžbe</h5>
       </div>

@@ -4,9 +4,9 @@ import AdminLayoutSidebar from "./sidebar/AdminLayoutSidebar.jsx";
 
 const AdminLayout = () => {
   return (
-    <div className={"flex flex-col h-screen"}>
+    <div className={"w-screen h-screen flex flex-col overflow-hidden"}>
       <AdminLayoutTopbar/>
-      <div className={"flex flex-grow"}>
+      <div className={"flex flex-grow overflow-hidden"}>
         <AdminLayoutSidebar/>
         <div className={"flex flex-grow"}>
           <Outlet/>

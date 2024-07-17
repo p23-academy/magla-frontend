@@ -49,7 +49,7 @@ const OrdersAdminOrderView = () => {
   }
 
   return (
-    <div className={"flex flex-col flex-grow p-2 bg-orange-50 gap-2"}>
+    <div className={"flex flex-col flex-grow p-2 bg-orange-50 gap-2 overflow-y-auto"}>
       <h4 className={"text-xl font-bold"}>Narudžba {order._id}</h4>
       <div className={"flex flex-col gap-2 bg-orange-200 p-2 rounded-lg"}>
         <p className={"text-lg"}>Kupac: {order.buyerName}</p>
