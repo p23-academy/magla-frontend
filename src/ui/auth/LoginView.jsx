@@ -2,7 +2,6 @@ import {Form, json, redirect, useActionData} from "react-router-dom";
 import {loginUser} from "../../data/auth/authRepo.js";
 import FormInput from "../components/forms/FormInput.jsx";
 import BigButton from "../components/buttons/BigButton.jsx";
-import Button from "../components/buttons/Button.jsx";
 
 export const loginAction = async ({request}) => {
   const formData = await request.formData()
@@ -12,7 +11,7 @@ export const loginAction = async ({request}) => {
   if (response.status === 200) {
     const token = response.data.token
     localStorage.setItem("token", token)
-    return redirect("/app")
+    return redirect("/shop/all")
   } else {
     return json(response.data)
   }

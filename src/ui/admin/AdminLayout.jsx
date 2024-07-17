@@ -1,6 +1,24 @@
 import AdminLayoutTopbar from "./AdminLayoutTopbar.jsx";
-import {Outlet} from "react-router-dom";
+import {Outlet, redirect} from "react-router-dom";
 import AdminLayoutSidebar from "./sidebar/AdminLayoutSidebar.jsx";
+import {decodeToken, verifyToken} from "../../data/auth/authRepo.js";
+
+export const adminLayoutLoader = async () => {
+  const token = localStorage.getItem("token");
+  if (!token) {
+    return redirect("/shop/all")
+  }
+  const verifyTokenResponse = await verifyToken(token)
+  if (verifyTokenResponse.status !== 200) {
+    localStorage.removeItem("token")
+    return redirect("/shop/all")
+  }
+  const decodedToken = decodeToken(token)
+  if (decodedToken.role !== "admin") {
+    return redirect("/shop/all")
+  }
+  return null
+}
 
 const AdminLayout = () => {
   return (

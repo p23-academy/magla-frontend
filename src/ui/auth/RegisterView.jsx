@@ -10,7 +10,9 @@ export const registerAction = async ({request}) => {
   const password = formData.get("password")
   const response = await registerUser(email, password)
   if (response.status === 200) {
-    return redirect("/login")
+    const token = response.data.token
+    localStorage.setItem("token", token)
+    return redirect("/shop/all")
   } else {
     return json(response.data)
   }

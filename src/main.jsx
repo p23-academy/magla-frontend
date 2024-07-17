@@ -11,7 +11,7 @@ import CategoriesAdminEditItemView, {
   editCategoryFormAction,
   editCategoryFormLoader
 } from "./ui/admin/categories/CategoriesAdminEditItemView.jsx";
-import AdminLayout from "./ui/admin/AdminLayout.jsx";
+import AdminLayout, {adminLayoutLoader} from "./ui/admin/AdminLayout.jsx";
 import ItemsAdminListView, {itemsListLoader} from "./ui/admin/items/ItemsAdminListView.jsx";
 import ItemsAdminNewItemView, {newItemFormAction, newItemLoader} from "./ui/admin/items/ItemsAdminNewItemView.jsx";
 import ItemsAdminEditItemView, {
@@ -65,6 +65,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/admin",
+    loader: adminLayoutLoader,
     element: <AdminLayout/>,
     children: [
       {
